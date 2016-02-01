@@ -9,7 +9,7 @@ import path from 'path';
 
 export default function(app) {
   // Insert routes below
-  app.use('/api/v1/regions', require('./api/v1/region'));
+  app.use('/api/regions', require('./api/region'));
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
 
