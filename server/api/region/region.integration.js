@@ -36,7 +36,8 @@ describe('Region API:', function() {
         .post('/api/regions')
         .send({
           name: 'New Region',
-          info: 'This is the brand new region!!!'
+          type: 'strata',
+          description: 'This is the brand new region!!!'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -51,7 +52,8 @@ describe('Region API:', function() {
 
     it('should respond with the newly created region', function() {
       newRegion.name.should.equal('New Region');
-      newRegion.info.should.equal('This is the brand new region!!!');
+      newRegion.type.should.equal('strata');
+      newRegion.description.should.equal('This is the brand new region!!!');
     });
 
   });
@@ -79,7 +81,8 @@ describe('Region API:', function() {
 
     it('should respond with the requested region', function() {
       region.name.should.equal('New Region');
-      region.info.should.equal('This is the brand new region!!!');
+      region.type.should.equal('strata');
+      region.description.should.equal('This is the brand new region!!!');
     });
 
   });
@@ -92,7 +95,8 @@ describe('Region API:', function() {
         .put('/api/regions/' + newRegion._id)
         .send({
           name: 'Updated Region',
-          info: 'This is the updated region!!!'
+          type: 'city',
+          description: 'This is the updated region!!!'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -111,7 +115,8 @@ describe('Region API:', function() {
 
     it('should respond with the updated region', function() {
       updatedRegion.name.should.equal('Updated Region');
-      updatedRegion.info.should.equal('This is the updated region!!!');
+      updatedRegion.type.should.equal('city');
+      updatedRegion.description.should.equal('This is the updated region!!!');
     });
 
   });
