@@ -1,10 +1,10 @@
 /**
  * Using Rails-like standard naming convention for endpoints.
- * GET     /api/v1/regions              ->  index
- * POST    /api/v1/regions              ->  create
- * GET     /api/v1/regions/:id          ->  show
- * PUT     /api/v1/regions/:id          ->  update
- * DELETE  /api/v1/regions/:id          ->  destroy
+ * GET     /api/regions              ->  index
+ * POST    /api/regions              ->  create
+ * GET     /api/regions/:id          ->  show
+ * PUT     /api/regions/:id          ->  update
+ * DELETE  /api/regions/:id          ->  destroy
  */
 
 'use strict';

@@ -34,7 +34,7 @@ describe('Region API Router:', function() {
     regionIndex.should.equal(routerStub);
   });
 
-  describe('GET /api/v1/regions', function() {
+  describe('GET /api/regions', function() {
 
     it('should route to region.controller.index', function() {
       routerStub.get
@@ -44,7 +44,7 @@ describe('Region API Router:', function() {
 
   });
 
-  describe('GET /api/v1/regions/:id', function() {
+  describe('GET /api/regions/:id', function() {
 
     it('should route to region.controller.show', function() {
       routerStub.get
@@ -54,7 +54,7 @@ describe('Region API Router:', function() {
 
   });
 
-  describe('POST /api/v1/regions', function() {
+  describe('POST /api/regions', function() {
 
     it('should route to region.controller.create', function() {
       routerStub.post
@@ -64,7 +64,7 @@ describe('Region API Router:', function() {
 
   });
 
-  describe('PUT /api/v1/regions/:id', function() {
+  describe('PUT /api/regions/:id', function() {
 
     it('should route to region.controller.update', function() {
       routerStub.put
@@ -74,7 +74,7 @@ describe('Region API Router:', function() {
 
   });
 
-  describe('PATCH /api/v1/regions/:id', function() {
+  describe('PATCH /api/regions/:id', function() {
 
     it('should route to region.controller.update', function() {
       routerStub.patch
@@ -84,7 +84,7 @@ describe('Region API Router:', function() {
 
   });
 
-  describe('DELETE /api/v1/regions/:id', function() {
+  describe('DELETE /api/regions/:id', function() {
 
     it('should route to region.controller.destroy', function() {
       routerStub.delete

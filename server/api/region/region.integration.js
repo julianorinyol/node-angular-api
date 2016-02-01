@@ -7,12 +7,12 @@ var newRegion;
 
 describe('Region API:', function() {
 
-  describe('GET /api/v1/regions', function() {
+  describe('GET /api/regions', function() {
     var regions;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/v1/regions')
+        .get('/api/regions')
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -30,10 +30,10 @@ describe('Region API:', function() {
 
   });
 
-  describe('POST /api/v1/regions', function() {
+  describe('POST /api/regions', function() {
     beforeEach(function(done) {
       request(app)
-        .post('/api/v1/regions')
+        .post('/api/regions')
         .send({
           name: 'New Region',
           info: 'This is the brand new region!!!'
@@ -56,12 +56,12 @@ describe('Region API:', function() {
 
   });
 
-  describe('GET /api/v1/regions/:id', function() {
+  describe('GET /api/regions/:id', function() {
     var region;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/v1/regions/' + newRegion._id)
+        .get('/api/regions/' + newRegion._id)
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -84,12 +84,12 @@ describe('Region API:', function() {
 
   });
 
-  describe('PUT /api/v1/regions/:id', function() {
+  describe('PUT /api/regions/:id', function() {
     var updatedRegion;
 
     beforeEach(function(done) {
       request(app)
-        .put('/api/v1/regions/' + newRegion._id)
+        .put('/api/regions/' + newRegion._id)
         .send({
           name: 'Updated Region',
           info: 'This is the updated region!!!'
@@ -116,11 +116,11 @@ describe('Region API:', function() {
 
   });
 
-  describe('DELETE /api/v1/regions/:id', function() {
+  describe('DELETE /api/regions/:id', function() {
 
     it('should respond with 204 on successful removal', function(done) {
       request(app)
-        .delete('/api/v1/regions/' + newRegion._id)
+        .delete('/api/regions/' + newRegion._id)
         .expect(204)
         .end((err, res) => {
           if (err) {
@@ -132,7 +132,7 @@ describe('Region API:', function() {
 
     it('should respond with 404 when region does not exist', function(done) {
       request(app)
-        .delete('/api/v1/regions/' + newRegion._id)
+        .delete('/api/regions/' + newRegion._id)
         .expect(404)
         .end((err, res) => {
           if (err) {
